@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191970">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:padding="16dp"
+            android:text="MY SHOPPING LIST"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_margin="8dp"
+            android:background="#191970">
+
+            <ListView
+                android:id="@+id/List"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#191970"
+                android:textColor="#2196F3" />
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/itemNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Enter item name"
+            android:textColor="#ffffff " />
+
+        <EditText
+            android:id="@+id/itemQuantityEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Enter item quantity"
+            android:textColor="#ffffff " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Add"
+                android:background="#00BCD4"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/Clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Clear"
+                android:background="#81D4FA"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
