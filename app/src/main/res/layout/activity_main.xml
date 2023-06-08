@@ -40,15 +40,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:hint="Enter item name"
-            android:textColor="#ffffff " />
+            android:textColor="#ffffff" />
 
-        <EditText
-            android:id="@+id/itemQuantityEditText"
+        <NumberPicker
+            android:id="@+id/itemQuantityPicker"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:hint="Enter item quantity"
-            android:textColor="#ffffff " />
+            android:layout_height="100dp"
+            android:layout_margin="8dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
