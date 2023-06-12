@@ -12,6 +12,7 @@ import android.widget.Toast
 import android.content.SharedPreferences
 
 
+
 class MainActivity : AppCompatActivity() {
     private val list = arrayListOf<Item>()
     private val REQUEST_CODE_SPEECH_INPUT = 1
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val itemNameEditText = findViewById<EditText>(R.id.itemNameEditText)
         val itemQuantityPicker = findViewById<NumberPicker>(R.id.itemQuantityPicker)
 
-        itemQuantityPicker.minValue = 0
+        itemQuantityPicker.minValue = 1
         itemQuantityPicker.maxValue = 100
 
         addButton.setOnClickListener {
@@ -48,12 +49,8 @@ class MainActivity : AppCompatActivity() {
                 val newItem = Item(itemName, itemQuantity)
                 list.add(newItem)
                 adapter.notifyDataSetChanged()
-
                 itemNameEditText.text.clear()
 
-                if (list.isEmpty()) {
-                    Toast.makeText(this, "WELCOME TO YOUR SHOPPING LIST", Toast.LENGTH_SHORT).show()
-                }
             } else {
                 Toast.makeText(this, "Please enter valid item details", Toast.LENGTH_SHORT).show()
             }
@@ -63,8 +60,6 @@ class MainActivity : AppCompatActivity() {
         voiceInputButton.setOnClickListener {
             startSpeechToText()
         }
-
-        // Ripristina la sessione salvata
         restoreSession()
     }
 
@@ -90,8 +85,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-
-        // Salva la sessione corrente
         saveSession()
     }
 
