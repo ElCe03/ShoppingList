@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        sharedPreferences = getSharedPreferences("MyShoppingList", MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences("EasyShop", MODE_PRIVATE)
 
         val listView = findViewById<ListView>(R.id.List)
         val adapter = ItemAdapter(this, list)
